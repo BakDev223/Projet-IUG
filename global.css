@@ -1,0 +1,436 @@
+/* 
+orange : #ff9900
+noir : #212121
+blanc : #FAFAFA
+gris : #f1efed
+*/
+@font-face {
+  font-family: Expose;
+  src: url("fonts/Expose-Variable.ttf");
+}
+@font-face{
+  font-family: Suppreme;
+  src : url("fonts/Supreme-Variable.ttf");
+}
+@font-face {
+  font-family: Zodiak;
+  src: url("fonts/Zodiak-Variable.ttf");
+}
+html{
+  box-sizing: border-box;
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  background-color: #FAFAFA;
+  width: 100%;
+  overflow-x : hidden;
+  box-sizing: inherit;
+}
+
+/* pour les mobiles */
+header{
+  height: 100vh;
+  width: 100%;
+}
+nav{
+  background-color: #f1efed;
+  height: 56px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header > div.sideBar{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 4;
+  background-color: #ff9900;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding-left: 20px;
+  padding-top: 20px;
+  left: -200%;
+  transition: left 1s ease ;
+}
+header > div.sideBar > a{
+  text-decoration: none;
+  color: #f1efed;
+  font-size: 20px;
+  margin-top: 10px;
+}
+nav img{
+  height: 48px;
+  width: 48px;
+  margin-left : 16px
+}
+nav > div{
+  display: none;
+}
+
+nav > button{
+  background: none;
+  border: 1px solid #212121;
+  margin-right: 12px;
+  border-radius: 6px;
+  padding: 3px
+
+}
+div.header-container{
+  width : 100%;
+  height: 85vh;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+div.header-container > .image-container{
+  width: 95%;
+  height:100%;
+  position: relative;
+}
+div.header-container > .image-container img{
+  height: 100%;
+  width: 100%;
+  border-radius :20px;
+  position: absolute;
+
+}
+div.header-container > .image-container .image-bg{
+  height: 100%;
+  width: 100%;
+  border-radius :20px;
+  position: absolute;
+  background-color: #212121;
+  z-index: 2;
+  opacity: 0.7;
+  backdrop-filter:  blur(5px) saturate(200%);
+}
+
+div.header-container > div.text{
+  position: absolute;
+  height: 50%;
+  width: 100%;
+  z-index: 3;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+div.header-container > div.text h1{
+  color : #ff9900;
+  text-align: center;
+  font-family: Zodiak;
+}
+div.header-container > div.text p{
+  color: #FAFAFA;
+  text-align: center;
+  margin: 16px;
+  font-family: Suppreme;
+}
+
+div.header-container > div.text > div{
+  height: 36px;
+  width: 180px;
+  background-color: #212121;
+  border-radius: 6px;
+  margin-top : 12px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+div.header-container > div.text > div >a{
+  color: #ff9900;
+  font-size: 20px;
+  text-align: center;
+  text-decoration: none;
+  margin-left: 12px;
+  font-family: Expose;
+}
+
+main{
+  padding: 16px;
+}
+main > section > h2{
+  color: #212121;
+}
+main  .box-container{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 32px;
+}
+main  .box-container > div{
+  width: 280px;
+  height: 280px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f1efed;
+  margin: 0 10px;
+  padding: 0 10px;
+  border-radius: 20px;
+}
+main  .box-container > div:hover{
+  border: 1px solid #ff9900;
+}
+main  .box-container > div .title{
+  background: #FAFAFA;
+  height: 48px;
+  width: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+/* pour tablettes */
+@media screen and (min-width:680px) {
+  header{
+    height: 100vh;
+    width: 100%;
+  }
+  nav{
+    background-color: #f1efed;
+    height: 56px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  nav img{
+    height: 48px;
+    width: 48px;
+    margin-left : 16px
+  }
+  header > div.sideBar{
+    display: none;
+  }
+  nav > div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  nav > button{
+    display : none;
+  }
+  nav > div div{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0 16px;
+  }
+  nav div a{
+    text-decoration: none;
+    color: #212121;
+  }
+  div.header-container{
+    width : 100%;
+    height: 85vh;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+  }
+  div.header-container > .image-container{
+    width: 95%;
+    height:100%;
+    position: relative;
+  }
+  div.header-container > .image-container img{
+    height: 100%;
+    width: 100%;
+    border-radius :20px;
+    position: absolute;
+  
+  }
+  div.header-container > .image-container .image-bg{
+    height: 100%;
+    width: 100%;
+    border-radius :20px;
+    position: absolute;
+    background-color: #212121;
+    z-index: 2;
+    opacity: 0.7;
+    backdrop-filter:  blur(5px) saturate(200%);
+  }
+  
+  div.header-container > div.text{
+    position: absolute;
+    height: 50%;
+    width: 100%;
+    z-index: 3;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  div.header-container > div.text h1{
+    color : #ff9900;
+    text-align: center;
+  }
+  div.header-container > div.text p{
+    color: #FAFAFA;
+    text-align: center;
+    margin: 16px;
+  }
+  
+  div.header-container > div.text > div{
+    height: 36px;
+    width: 180px;
+    background-color: #212121;
+    border-radius: 6px;
+    margin-top : 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  div.header-container > div.text > div >a{
+    color: #ff9900;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    margin-left: 12px;
+  }
+}
+.area-candidacy{
+  margin: 20px;
+}
+.area-candidacy ul{
+  list-style-type: circle;
+} 
+footer{
+  width: 100%;
+  background-color: #ff9900;
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+footer a{
+  margin: auto 10px;
+}
+
+
+/* pour les PCs */
+
+
+
+
+/* Pour les desktop */
+
+@media screen and (min-width:1024px) {
+  header{
+    height: 100vh;
+    width: 100%;
+  }
+  nav{
+    background-color: #f1efed;
+    height: 56px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  nav > div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  nav img{
+    height: 48px;
+    width: 48px;
+    margin-left : 16px
+  }
+  nav > button{
+    display : none;
+  }
+  nav > div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  nav > div div{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0 16px;
+  }
+  nav div a{
+    text-decoration: none;
+    color: #212121;
+  }
+  
+  div.header-container{
+    width : 100%;
+    height: 85vh;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+  }
+  div.header-container > .image-container{
+    width: 95%;
+    height:100%;
+    position: relative;
+  }
+  div.header-container > .image-container img{
+    height: 100%;
+    width: 100%;
+    border-radius :20px;
+    position: absolute;
+  
+  }
+  div.header-container > .image-container .image-bg{
+    height: 100%;
+    width: 100%;
+    border-radius :20px;
+    position: absolute;
+    background-color: #212121;
+    z-index: 2;
+    opacity: 0.7;
+    backdrop-filter:  blur(5px) saturate(200%);
+  }
+  
+  div.header-container > div.text{
+    position: absolute;
+    height: 50%;
+    width: 30%;
+    left: 5%;
+    z-index: 3;
+  }
+  
+  div.header-container > div.text h1{
+    color : #ff9900
+  }
+  div.header-container > div.text p{
+    color: #FAFAFA;
+  }
+  
+  div.header-container > div.text > div{
+    height: 36px;
+    width: 180px;
+    background-color: #212121;
+    border-radius: 6px;
+    margin-top : 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  div.header-container > div.text > div >a{
+    color: #ff9900;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    margin-left: 12px;
+  }
+}
