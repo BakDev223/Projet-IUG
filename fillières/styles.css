@@ -1,0 +1,63 @@
+/* 
+orange : #ff9900
+noir : #212121
+blanc : #FAFAFA
+gris : #f1efed
+*/
+@font-face {
+  font-family: Expose;
+  src: url("../fonts/Expose-Variable.ttf");
+}
+@font-face {
+  font-family: Suppreme;
+  src: url("../fonts/Supreme-Variable.ttf");
+}
+@font-face {
+  font-family: Zodiak;
+  src: url("../fonts/Zodiak-Variable.ttf");
+}
+html{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*{
+  box-sizing: inherit;
+}
+
+body{
+  width: 100%;
+  height: 100%;
+  margin: inherit;
+  padding: 12px;
+}
+.container{
+  width: 100%;
+  height: 100%;
+
+}
+.container img{
+  width: 100%;
+}
+
+.container h2{
+  color: #ff9900;
+  font-style: bold;
+  font-family: Zodiak;
+  text-align: center;
+}
+
+.container h3{
+  font-family: Zodiak;
+  color: #ff9900;
+  font-family: Suppreme;
+}
+.container p{
+  font-family: Suppreme;
+}
+
+ul li{
+  list-style: circle;
+  font-family: Suppreme;
+}
