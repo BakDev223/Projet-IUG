@@ -265,23 +265,6 @@ section.lmd div {
   margin: 12px 0;
   
 }
-section.lmd div:nth-child(2){
-  animation: comme-from-left 1s ease forwards;
-  transform: translateX(-100%);
-}
-section.lmd div:nth-child(3){
-  animation: comme-from-left 1s ease forwards 0.5s;
-  transform: translateX(-100%);
-}
-section.lmd div:nth-child(4){
-  animation: comme-from-left 1s ease forwards 1s;
-  transform: translateX(-100%);
-}
-@keyframes comme-from-left {
-  100%{
-    transform: initial;
-  }
-}
 section.lmd h2 {
   font-family: Zodiak;
   margin-left: 12px;

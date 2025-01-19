@@ -40,7 +40,7 @@ const year = date.getFullYear();
 if (cr !== null) cr.textContent = `Copyright© ${year}.Tous droit réservés.`;
 
 // animations rélatives au défilement
-const layerTextTarget = document.getElementById("layerText");
+const target = document.getElementById("layerText");
 
 const intersetionOptions = {
   root: null,
@@ -58,8 +58,8 @@ function callback(entries, observer) {
     }
   });
 }
-if (layerTextTarget !== null) {
-  observer.observe(layerTextTarget);
+if (target !== null) {
+  observer.observe(target);
 }
 
 // Appelle  à l'api 
@@ -102,24 +102,3 @@ window.onload = () => {
   }
 };
 
-
-
-//animation des boîtes des diplômes
-
-const options = {
-  root : null,
-  rootMargin : '0px',
-  threhold  : 1
-}
-const div = document.querySelector(".lmd > div");
-console.log(div)
-const boxObserver = new IntersectionObserver(animate , options);
-
-function animate(entries , boxObserver){
-  entries.forEach(entry=>{
-    if(entry.target.isIntersecting){
-      entry.target.style.animation = "comme-from-left 1s ease forwards 1s"
-    }
-  })
-}
-boxObserver.observe(div);
