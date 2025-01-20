@@ -903,6 +903,11 @@ main.presentation > p {
   font-size: 16.5px;
   font-family: Suppreme;
 }
+main.presentation .ms-title{
+  color: #ff9900;
+  text-align: center;
+  font-family: zodiak;
+}
 
 /* Page contact */
 
